@@ -1,0 +1,18 @@
+
+<div class="container col-md-offset-4 col-lg-offset-4 col-md-4 col-lg-4 col-sm-4">
+ 
+
+  <h2 class="text-primary">Login</h2>
+<form #login = "ngForm"  class="form-horizontal">
+    
+  <label class="control-label text-muted">user name</label> 
+   <input type="text" name="Uname" ngModel class="form-control " required/>
+  <br/>
+   <label class="control-label text-muted">password</label> 
+   <input type="password" name="Upass" ngModel class="form-control" required/>
+   <br/>
+   
+   <input type = "submit" (click)="UserLogin(login.value)" value = "login" class="btn btn-lg  btn-outline-primary btn-block">
+ 
+  </form>
+    </div>

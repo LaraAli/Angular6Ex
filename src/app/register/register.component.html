@@ -1,0 +1,33 @@
+<div class="container col-md-offset-4 col-lg-offset-4 col-md-4 col-lg-4 col-sm-4">
+  
+ 
+  <h2 class="text-primary">Register</h2>
+<form #register = "ngForm"  >
+  <label class="control-label text-muted">user name</label> 
+   <input type="text"  name="Uname" ngModel  class="form-control" required/> 
+  <br/>
+  
+  <label class="control-label text-muted">password</label> 
+  <input type="password"  name="Upass" ngModel class="form-control" required/>
+  <br/>
+
+  <label class="control-label text-muted">first name</label> 
+  <input type="text"  name="Ufname" ngModel class="form-control" required/> 
+ <br/>
+ <label class="control-label text-muted">last name</label> 
+   <input type="text"  name="Ulname" ngModel class="form-control" required/> 
+  <br/>
+  <label class="control-label text-muted">user email</label> 
+   <input type="email" name="Uemail" ngModel class="form-control" aria-describedby="emailHelp"  required/> 
+   
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+ 
+  <br/>
+  <label class="control-label text-muted">user phone</label> 
+   <input type="tel" pattern="^\d{10}$" name="Uphone" ngModel class="form-control" aria-describedby="emailHelp"/> 
+   <small id="emailHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
+
+  <br/>
+
+   <input type = "submit" (click)="Reg(register.value)" value = "Register" class="btn btn-outline-primary">
+    </form>

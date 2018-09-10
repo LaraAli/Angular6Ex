@@ -1,0 +1,59 @@
+<hr/>
+<div class="container col-md-offset-4 col-lg-offset-4 col-md-4 col-lg-4 col-sm-4" >
+
+
+<hr/>
+<div *ngIf="!hide">
+    <h3 class="text-primary">
+        Your Profile is :
+    </h3>
+  <table  class="table table-bordered table-responsive table-hover text-info"  >
+<tr>
+    <td>user name :</td>  <td>{{user.name}}</td>
+</tr>
+<tr>
+    <td>first name :</td>  <td>{{user.Fname}}</td>
+</tr>
+<tr>
+    <td>last name : </td>  <td>{{user.Lname}}</td>
+</tr>
+<tr>
+    <td>email :</td>  <td>{{user.email}}</td>
+</tr>
+<tr>
+    <td>phone :</td>  <td>{{user.phone}}</td>
+</tr>
+
+</table>
+<button (click)="hide = true;" class="btn btn-outline-primary" >edit profile</button> 
+</div>
+
+<div *ngIf="hide">
+  
+  <form #edit = "ngForm"  >
+    <label class="control-label text-muted">user name</label> 
+     <input type="text" placeholder="{{user.name}}" name="Uname" ngModel class="form-control" required/> 
+    <br/>
+    
+    <label class="control-label text-muted">password</label> 
+    <input type="password" placeholder="{{user.password}}" name="Upass" ngModel class="form-control" required/>
+    <br/>
+    
+    <label class="control-label text-muted" >first name</label> 
+    <input type="text" placeholder="{{user.Fname}}" name="Ufname" ngModel class="form-control" required/> 
+   <br/>
+   <label class="control-label text-muted">last name</label> 
+     <input type="text" placeholder="{{user.Lname}}" name="Ulname" ngModel class="form-control" required/> 
+    <br/>
+    <label class="control-label text-muted">user email</label> 
+     <input type="text" placeholder="{{user.email}}" name="Uemail" ngModel class="form-control" required/> 
+    <br/>
+    <label class="control-label text-muted" >user phone</label> 
+     <input type="text" placeholder="{{user.phone}}" name="Uphone" ngModel class="form-control" required/> 
+    <br/>
+
+     <input type = "submit" (click)="Save(edit.value)" value = "Save" class="btn btn-outline-primary">
+      </form>
+
+</div>
+</div>
